@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".ui.RemoteFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="scanPressed"
+        app:layout_constraintBottom_toTopOf="@+id/arrows"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arrows"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_tv_24"
+        app:tint="#6200ED" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="buttonPressed"
+        android:rotation="90"
+        android:tag="4"
+        app:layout_constraintBottom_toTopOf="@+id/foword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arrows"
+        app:layout_constraintTop_toTopOf="@+id/arrows"
+        app:srcCompat="@drawable/ic_baseline_u_turn_left_24" />
+
+    <ImageView
+        android:id="@+id/backwords"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_media_rew"
+        app:layout_constraintBottom_toTopOf="@+id/volume"
+        app:layout_constraintEnd_toStartOf="@+id/start"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrows" />
+
+    <ImageView
+        android:id="@+id/stop"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/ic_baseline_stop_24"
+        app:layout_constraintBottom_toBottomOf="@+id/play"
+        app:layout_constraintEnd_toStartOf="@+id/end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/play"
+        app:layout_constraintTop_toTopOf="@+id/play" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="@+id/puase"
+        app:layout_constraintEnd_toStartOf="@+id/stop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/puase"
+        app:layout_constraintTop_toTopOf="@+id/puase" />
+
+    <ImageView
+        android:id="@+id/puase"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/start"
+        app:layout_constraintEnd_toStartOf="@+id/play"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/start"
+        app:layout_constraintTop_toTopOf="@+id/start" />
+
+    <ImageView
+        android:id="@+id/end"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_media_next"
+        app:layout_constraintBottom_toBottomOf="@+id/stop"
+        app:layout_constraintEnd_toStartOf="@+id/foword"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stop"
+        app:layout_constraintTop_toTopOf="@+id/stop" />
+
+    <ImageView
+        android:id="@+id/foword"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_media_ff"
+        app:layout_constraintBottom_toBottomOf="@+id/end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/end"
+        app:layout_constraintTop_toTopOf="@+id/end" />
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@android:drawable/ic_media_previous"
+        app:layout_constraintBottom_toBottomOf="@+id/backwords"
+        app:layout_constraintEnd_toStartOf="@+id/puase"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backwords"
+        app:layout_constraintTop_toTopOf="@+id/backwords" />
+
+    <ImageView
+        android:id="@+id/volume"
+        android:layout_width="59dp"
+        android:layout_height="67dp"
+        android:src="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintBottom_toBottomOf="@+id/channel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/channel"
+        app:tint="#FFFFFF" />
+
+    <com.example.androidtvremote.ui.VolumeImageView
+        android:id="@+id/volume_down"
+        android:layout_width="59dp"
+        android:layout_height="67dp"
+        android:src="@drawable/ic_baseline_remove_24"
+        android:tag="25"
+        app:layout_constraintBottom_toBottomOf="@+id/channel_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/channel_down"
+        app:tint="#FFFFFF" />
+
+    <com.example.androidtvremote.ui.VolumeImageView
+        android:id="@+id/volume_up"
+        android:layout_width="59dp"
+        android:layout_height="67dp"
+        android:src="@drawable/ic_baseline_add_26"
+        android:tag="24"
+        app:layout_constraintBottom_toBottomOf="@+id/channel_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/channel_up"
+        app:tint="#FFFFFF" />
+
+    <include
+        android:id="@+id/arrows"
+        layout="@layout/arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/channel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/power"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="buttonPressed"
+        android:src="@android:drawable/ic_lock_power_off"
+        android:tag="26"
+        app:layout_constraintBottom_toTopOf="@+id/arrows"
+        app:layout_constraintEnd_toStartOf="@+id/arrows"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+
+    <ImageView
+        android:id="@+id/channel"
+        android:layout_width="59dp"
+        android:layout_height="67dp"
+        android:src="@drawable/ic_baseline_tv_24"
+        app:layout_constraintBottom_toTopOf="@+id/channel_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrows"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/channel_down"
+        android:layout_width="59dp"
+        android:layout_height="67dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_remove_24"
+        android:tag="167"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/channel_up"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/channel_up"
+        android:layout_width="59dp"
+        android:layout_height="67dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_add_26"
+        android:tag="166"
+        app:layout_constraintBottom_toTopOf="@+id/channel_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/channel"
+        app:tint="#FFFFFF" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/channel_up"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/volume_up"
+        app:layout_constraintTop_toBottomOf="@+id/play">
+
+
+        <TextView
+            android:id="@+id/button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="8"
+            android:text="1"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/button_4"
+            app:layout_constraintEnd_toStartOf="@+id/button_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/button_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="13"
+            android:text="6"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/button_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttom_5"
+            app:layout_constraintTop_toBottomOf="@+id/button_3" />
+
+        <TextView
+            android:id="@+id/button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="10"
+            android:text="3"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/button_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/button_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="11"
+            android:text="4"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/button_7"
+            app:layout_constraintEnd_toStartOf="@+id/buttom_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_1" />
+
+        <TextView
+            android:id="@+id/buttom_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="12"
+            android:text="5"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/button_8"
+            app:layout_constraintEnd_toStartOf="@+id/button_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_4"
+            app:layout_constraintTop_toBottomOf="@+id/button_2" />
+
+        <TextView
+            android:id="@+id/button_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="14"
+            android:text="7"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/placeholder_left"
+            app:layout_constraintEnd_toStartOf="@+id/button_8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_4" />
+
+        <TextView
+            android:id="@+id/button_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonPressed"
+            android:tag="16"
+            android:text="9"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/placeholder_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_8"
+            app:layout_constraintTop_toBottomOf="@+id/button_6" />
+
+        <TextView
+            android:id="@+id/button_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="15"
+            android:text="8"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/button_0"
+            app:layout_constraintEnd_toStartOf="@+id/button_9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_7"
+            app:layout_constraintTop_toBottomOf="@+id/buttom_5" />
+
+        <TextView
+            android:id="@+id/button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="buttonPressed"
+            android:tag="9"
+            android:text="2"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toTopOf="@+id/buttom_5"
+            app:layout_constraintEnd_toStartOf="@+id/button_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/button_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonPressed"
+            android:tag="7"
+            android:text="0"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/placeholder_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/placeholder_left"
+            app:layout_constraintTop_toBottomOf="@+id/button_8" />
+
+        <TextView
+            android:id="@+id/placeholder_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_0"
+            app:layout_constraintTop_toBottomOf="@+id/button_9" />
+
+        <TextView
+            android:id="@+id/placeholder_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:textAppearance="@style/ChannelNumbers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_0"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_7" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/home_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="buttonPressed"
+        android:tag="3"
+        app:layout_constraintBottom_toTopOf="@+id/backwords"
+        app:layout_constraintEnd_toStartOf="@+id/arrows"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/power"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

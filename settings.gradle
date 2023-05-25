@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "AndroidTvRemote"
+include ':app'
+
+include ':tls-channel-master'

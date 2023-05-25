@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AndroidTvAutoRemore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="menu_switch">Android-TV-Remote</string>
+    <string name="menu_about">menu</string>
+    <string name="devices_req">please select your Android TV</string>
+    <string name="code_req">Please enter the code displayed at your Android TV screen</string>
+    <string name="err_noargs">please select both action and time</string>
+    <string name="loading_phase_alert">please wait</string>
+    <string name="remote_object_key">ATVRemote</string>
+    <string name="task_id_key">TaskId</string>
+    <string name="task_position_key">position</string>
+    <string name="serialized_remote_key">serializedRemote</string>
+    <string name="current_ip_key">ip</string>
+    <string name="ip_list">ip_list</string>
+</resources>

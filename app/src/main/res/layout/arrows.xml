@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-8dp">
+
+    <ImageView
+        android:id="@+id/ok_button"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_circle_24"
+        android:tag="23"
+        app:layout_constraintStart_toEndOf="@+id/arrow_left"
+        app:layout_constraintTop_toBottomOf="@+id/arrow_up"
+        app:tint="@color/purple_500" />
+
+    <ImageView
+        android:id="@+id/arrow_left"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+        android:tag="21"
+        app:layout_constraintBottom_toBottomOf="@+id/ok_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ok_button"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/arrow_up"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+        android:tag="19"
+        app:layout_constraintEnd_toEndOf="@+id/ok_button"
+        app:layout_constraintStart_toStartOf="@+id/ok_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:tag="22"
+        app:layout_constraintBottom_toBottomOf="@+id/ok_button"
+        app:layout_constraintStart_toEndOf="@+id/ok_button"
+        app:layout_constraintTop_toTopOf="@+id/ok_button"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/arrow_down"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:onClick="buttonPressed"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:tag="20"
+        app:layout_constraintEnd_toEndOf="@+id/ok_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ok_button"
+        app:layout_constraintTop_toBottomOf="@+id/ok_button"
+        app:tint="#FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
